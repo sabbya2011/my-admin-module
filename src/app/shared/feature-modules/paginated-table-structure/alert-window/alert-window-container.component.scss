@@ -1,0 +1,14 @@
+.confirm_container{
+    display: block !important;
+    position:absolute !important;
+    background-color: rgba(0,0,0,0.1);
+
+    .confirm_content_container{
+        width: 300px !important;
+        margin: 0 !important;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        position: fixed !important;
+    }
+}

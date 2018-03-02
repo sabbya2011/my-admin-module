@@ -1,0 +1,18 @@
+<div class="modal in confirm_container" *ngIf="alert_window_visibility">
+    <div class="modal-dialog confirm_content_container">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Confirmation Window</h4>
+        </div>
+        <div class="modal-body">
+          <p>Are you sure you want to proceed?</p>
+          <div class="row">
+            <div class="col-12-xs text-center">
+              <button class="btn btn-success btn-md" (click)="delete()">Yes</button>
+              <button class="btn btn-danger btn-md" (click)="cancel()">No</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

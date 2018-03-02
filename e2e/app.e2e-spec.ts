@@ -1,6 +1,6 @@
 import { AppPage } from './app.po';
 
-describe('bayer-admin-project App', () => {
+describe('my-admin-project App', () => {
   let page: AppPage;
 
   beforeEach(() => {

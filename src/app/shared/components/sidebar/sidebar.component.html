@@ -1,0 +1,34 @@
+<nav id="sidebar">
+    <div class="sidebar-header">
+        <img src="assets/img/mylogo.png" alt="" class="logo-sidebar">
+    </div>
+
+    <ul class="list-unstyled components">
+        <li class="active dropdown" dropdown>
+            <a dropdown-open>Management</a>
+            <ul class="collapse list-unstyled dropdown-menu" role="menu">
+                <li>
+                    <a [ngClass]="getRoutingSpecificClasses('/processedlogin/region')"
+                    (click)="navigateToURL('/processedlogin/region','Region')">Region</a>
+                </li>
+            </ul>
+        </li>
+        <li class="active dropdown" dropdown>
+            <a dropdown-open>Authoring</a>
+            <ul class="collapse list-unstyled dropdown-menu" role="menu">
+                <li>
+                    <a [ngClass]="getRoutingSpecificClasses('/processedlogin/product-catagory')"
+                    (click)="navigateToURL('/processedlogin/product-catagory','Product Catagory')">Product Catagory</a>
+                </li>
+                <li>
+                    <a [ngClass]="getRoutingSpecificClasses('/processedlogin/retailer')"
+                    (click)="navigateToURL('/processedlogin/retailer','Retailer')">Retailer</a>
+                </li>
+                <li>
+                    <a [ngClass]="getRoutingSpecificClasses('/processedlogin/faq')"
+                    (click)="navigateToURL('/processedlogin/faq','FAQ')">FAQ</a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</nav>

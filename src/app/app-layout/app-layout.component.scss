@@ -1,0 +1,23 @@
+.wrapper{
+    display:flex;
+}
+.dashboard-container{
+    height: 100vh;
+    width: 100%;
+    transition: all 0.3s;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+.dashboard-container.active {
+    width: 100%;
+}
+.routed-pages-container{
+    padding: 10px;
+}
+@media (max-width: 768px) {
+    .dashboard-container span {
+        display: none;
+    }
+}

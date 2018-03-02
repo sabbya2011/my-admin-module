@@ -1,0 +1,17 @@
+<div class="header-component">
+    <button type="button" id="sidebar_switch" (click)="toggleSidebar()" class="btn btn-info navbar-btn sidebar-btn">
+        <i class="glyphicon glyphicon-align-left"></i>
+    </button>
+    <span class="homepage-container" (click)="gotoHome()">
+        <i class="glyphicon glyphicon-home"></i>
+    </span>
+    <span class="header-url-descriptor">
+        {{ header_url_text }}
+    </span>    
+    <span class="logout-container" (click)="logoutUser()">
+        <i class="glyphicon glyphicon-log-out"></i>
+    </span>
+    <span class="header-user-container">
+        Welcome {{ headerUserName }}
+    </span>
+</div>

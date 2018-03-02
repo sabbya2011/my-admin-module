@@ -1,0 +1,10 @@
+<div class="wrapper">
+    <app-sidebar (URLHeaderChanged)="sidebarRoutingChange($event)"></app-sidebar>
+    <div class="dashboard-container" id="dashboard_container">
+        <app-header [routing_url_header]="sidebar_routing_header"></app-header>
+        <div class="routed-pages-container">
+            <router-outlet></router-outlet>
+        </div>
+        <app-footer></app-footer>
+    </div>
+</div>

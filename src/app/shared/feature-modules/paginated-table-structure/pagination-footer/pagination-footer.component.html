@@ -1,0 +1,20 @@
+<nav class="navbar navbar-default footer-nav">
+    <div class="btn-group" role="group" aria-label="...">
+        <button type="button" (click)="traverseTable('left')"
+        class="btn btn-primary glyphicon glyphicon-chevron-left"
+        [disabled]="disableTraverseTable('left')"></button>
+        <button type="button" (click)="traverseTable('right')"
+        class="btn btn-primary glyphicon glyphicon-chevron-right"
+        [disabled]="disableTraverseTable('right')"></button>
+    </div>
+
+    <span class="footer-text align-sub-text-first">{{ pagination_info }} ( {{ total_row_info }} )</span>
+
+    <button class="btn btn-success align-sub-text-first glyphicon glyphicon-plus" 
+      type="button" (click)="createTableEntryInvoked()"></button>
+    
+    
+    <span class="pull-right footer-text">#Items / Page 10</span>
+
+    
+</nav>

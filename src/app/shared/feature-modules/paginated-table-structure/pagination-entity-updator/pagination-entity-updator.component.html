@@ -1,0 +1,18 @@
+<div class="update-form-back">
+  <div class="update-form-fore">
+    <div class="input-group input-group-lg group-space"
+      *ngFor="let item of header_format">
+      <span class="input-group-addon">{{item.name}}</span>
+      <input *ngIf="item.type=='string'" type="text" class="form-control" 
+        [placeholder]="item.name" [(ngModel)]="item.value">
+      <span class="flag-checkbox" *ngIf="item.type=='checkbox'">
+          <input type="checkbox" [(ngModel)]="item.value">
+        </span>
+    </div>
+    
+    <button class="btn btn-primary group-space" 
+      (click)="updateTableView()" type="button">Submit</button>
+    <button class="btn btn-danger group-space glyphicon glyphicon-remove" 
+      (click)="closeForm()" type="button"></button>
+  </div>
+</div>

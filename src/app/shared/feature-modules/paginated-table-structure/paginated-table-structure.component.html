@@ -1,0 +1,28 @@
+<app-paged-table-view [table_data]="table_data" 
+  [rows_per_page]="rows_per_page" [start_index]="pagination_start_index" 
+  (tableDataModification)=modifyTableData($event)
+  (tableDataDeletion)=showDeleteWindow($event)
+  [header_format]="table_header_obj"
+  ></app-paged-table-view>
+<!-- <app-selection-container></app-selection-container> -->
+<div class="entry-editor-container" *ngIf="entry_editor_visibililty">
+  <app-pagination-entity-updator (tableUpdateCalled)=updateTableView($event) 
+    (hideTableEntryForm)=showHideEntryEditor($event)
+    (modifyExistingTableData)=editTableDataByIndex($event) 
+    [modify_existing_flag]="modify_existing_flag" [selected_index]="selected_row_id"
+    [start_index]="pagination_start_index" [table_data]="table_data"
+    [header_format]="table_header_obj">
+  </app-pagination-entity-updator>
+</div>
+<app-pagination-footer (createRowFormInvoked)=showHideEntryEditor($event) 
+  (updatedTableStartIndex)=traverseTableView($event)
+  [complete_table_data_length]="complete_table_data.length" 
+  [table_data]="table_data" [rows_per_page]="rows_per_page" 
+  [start_index]="pagination_start_index">
+</app-pagination-footer>
+<alert-window-container 
+[show_alert_window]="show_confirm_window"
+(responseAlertWindow)="responseFromConfirmBox($event)"
+>
+
+</alert-window-container>

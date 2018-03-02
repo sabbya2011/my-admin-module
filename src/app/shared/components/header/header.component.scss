@@ -1,0 +1,32 @@
+.header-component{
+    background-color: #eeeeee;
+    line-height: 50px;
+    padding: 0 10px 0 10px;
+}
+.sidebar-btn{
+    display: none;
+    margin-right: 20px;
+}
+.logout-container{
+    float: right;
+    cursor: pointer;
+}
+.header-url-descriptor{
+    color: #333333;
+    font-size: 25px;
+    margin-left: 15px;
+}
+.header-user-container{
+    float: right;
+    margin-right: 20px;
+    color: #333333;
+    font-size: 14px;
+}
+.homepage-container{
+    cursor: pointer;
+}
+@media (max-width: 768px) {
+    .sidebar-btn{
+        display: inline-block;
+    }
+}
